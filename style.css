@@ -64,50 +64,119 @@ h6 {
 /* my styles */
 
 @font-face {
-    font-family: norse ;
-    src: url(assests/Norse-Bold.otf);
+  font-family: norse;
+  src: url(assests/Norse-Bold.otf);
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--main);
 }
 
 /* left side */
 
-.container, .logo {
-    display: flex;
-    flex-flow: row wrap;
+.container,
+.logo {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.image-container{
-    background-image: url(assests/flower.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 40vw;
+.image-container {
+  background-image: url(assests/flower.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40vw;
 }
 
-.logo{
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    
-    position: relative;
-    top: 5vh;
-    
-    background-color: rgba(0, 0, 0, 0.6);
+.logo {
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 
-    font-family: norse , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
-    letter-spacing: 1vw;
-    font-weight: bolder;
-    font-size: large;
+  position: relative;
+  top: 5vh;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  font-family: norse, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--main);
+  letter-spacing: 1vw;
+  font-weight: bolder;
+  font-size: large;
 }
 
-img[alt="logo"]{
-    height: 10vh;
+img[alt="logo"] {
+  height: 10vh;
 }
-
 
 /* right side */
+
+:root{
+--main: #FFF8DB;
+--secondary: #FFB1B1;
+--third: #7776B3;
+}
+
+.form-container,
+form {
+  font-family: norse, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 60vw;
+
+  height: 60vh;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  color: var(--main);
+
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+
+.form-container{
+  background-color: var(--main);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.input input {
+  width: 70%;
+}
+
+form {
+  background-color: var(--secondary);
+  margin:0 30px;
+  /* border: 3px solid rgb(237, 233, 233); */
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.sign-up{
+  display: block;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.sign-up button{
+  padding: 7px 35px;
+  background-color: var(--third);
+  border: 1px solid var(--main);
+  border-radius: 10px;
+  color: var(--main);
+}
